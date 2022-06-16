@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:local="clr-namespace:Chat;assembly=Chat"
+    x:Class="Chat.Views.PhotoPage"
+    BackgroundColor="Black">
+   
+          <local:PinchToZoomContainer>
+                              <local:PinchToZoomContainer.Content>
+     <Image x:Name="fullPhoto" VerticalOptions="CenterAndExpand"
+           HorizontalOptions="CenterAndExpand" Scale="2"> 
+                    </Image>
+                                    </local:PinchToZoomContainer.Content>
+                       </local:PinchToZoomContainer>
+</ContentPage>

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Chat.Views.AboutPage"
+           
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:local="clr-namespace:Chat;assembly=Chat" >
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Photo"
+                 Order="Secondary"
+                Clicked="Open_galery" />
+        <ToolbarItem Text="Video"
+                     Clicked="Open_VideoGalery"
+                     Order="Secondary"/>
+         <ToolbarItem Text="Camera"
+                      Clicked="Open_camera"
+                     Order="Secondary"/>
+     <!-- <ToolbarItem Text="Audio"
+                   Clicked="AudioToolClicked"
+                   Order="Secondary"/>-->
+      
+</ContentPage.ToolbarItems>
+
+     <Grid RowDefinitions="*, auto"
+          Margin="-1"
+           VerticalOptions="End">
+   
+    <StackLayout VerticalOptions="End">
+        
+           <SearchBar 
+               BackgroundColor="Black"
+                      Opacity="1"
+               TextColor="White"
+               Placeholder="Search"
+                       x:Name="TxtSearch"
+                       TextChanged="TxtSearch_TextChanged"
+                     SearchButtonPressed="TxtSearch_SearchButtonPressed" >
+                     </SearchBar>
+        <!--  SearchButtonPressed="TxtSearch_SearchButtonPressed"-->
+    
+      <ListView x:Name="DatabaseItems"
+          ItemsSource="{Binding messages}"
+                HasUnevenRows="True"
+                VerticalOptions="End">
+
+          <ListView.ItemTemplate>
+              <DataTemplate>
+                  <ViewCell>
+                       <local:PinchToZoomContainer>
+                              <local:PinchToZoomContainer.Content>
+                      <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem 
+                                            Text="Edit" BackgroundColor="Orange"
+                                                   x:Name="EditSwipeItem"
+                                                   CommandParameter="{Binding Id}"
+                                                  Invoked="EditSwipeItem_Invoked"></SwipeItem>
+                                        <SwipeItem Text="Delete" BackgroundColor="Red" CommandParameter="{Binding Id}"
+                                                   x:Name="DeleteSwipeItem"
+                                                 Invoked="DeleteMenuItem_Clicked" ></SwipeItem>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+                        <SwipeView.LeftItems>
+                             <SwipeItems>
+                                     <SwipeItem IsVisible="{Binding isVideo}" Text="Full screen" BackgroundColor="Green"
+                                                x:Name="VideoSwipe"
+                                                CommandParameter="{Binding Id}"
+                                                Invoked="VideoSwipe_Invoked"/>
+                                  <SwipeItem IsVisible="{Binding isFile}" Text="Full screen" BackgroundColor="Green"
+                                       x:Name="PhotoSwipe"
+                                             CommandParameter="{Binding Id}"
+                                             Invoked="PhotoSwipe_Invoked"
+                                       />
+                                 </SwipeItems>
+                           
+                        </SwipeView.LeftItems>    
+                          <StackLayout x:Name="messageStack"> 
+
+                  <Frame
+                      CornerRadius="15"                
+                         HorizontalOptions="EndAndExpand"
+                         BackgroundColor="#D24136">
+
+                      <StackLayout HorizontalOptions="End">
+                           <Label                        
+                                 Text="{Binding UserName}"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="End"
+                               Margin="0,-10,-10,0"/>
+                        
+                           <Image IsVisible="{Binding isFile}" 
+                                
+                                 VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="Center">
+                               <Image.Source>
+                                   <UriImageSource CacheValidity="20"
+                                                   CachingEnabled="True"
+                                       Uri="{Binding File}"/>
+                               </Image.Source>
+                    </Image>
+                           <xct:MediaElement IsVisible="{Binding isVideo}"
+                                            HeightRequest="500" WidthRequest="500"
+                              KeepScreenOn="True"
+                              Source="{Binding Video}"
+                              HorizontalOptions="End"
+                              VerticalOptions="CenterAndExpand"
+                              AutoPlay="False">   
+                          </xct:MediaElement>
+
+                         <!-- <StackLayout x:Name="AudioTemplate" Orientation="Horizontal" IsVisible="{Binding isAudio}">
+                              
+
+                              <Image Source="{Binding PlayIcon}">
+                                 <Image.GestureRecognizers>
+                                     <TapGestureRecognizer Tapped="AudioTap_Invoked" CommandParameter="{Binding Id}"/>
+                                 </Image.GestureRecognizers>
+                              </Image>
+                           
+
+                   ####### <Label Text="{Binding Position}" TextColor="White" FontSize="12" HorizontalOptions="Start"  VerticalOptions="Center"/>
+                    <Slider Value="{Binding Position.TotalSeconds}"
+                            Maximum="{Binding Maximum}"
+                            MinimumTrackColor="#D4420C"  WidthRequest="200"
+                            MaximumTrackColor="#C0C8D4" ThumbColor="#D4420C"
+                            HorizontalOptions="FillAndExpand"/>
+                               <Grid HorizontalOptions="FillAndExpand">
+                       
+                        <Label TextColor="White" Text="{Binding Duration}" FontSize="12" HorizontalOptions="End"  VerticalOptions="Center"/>
+                                
+                              </Grid>#######
+                          </StackLayout>-->
+                         
+                    <Label TextColor="White" Text="{Binding Message}"     
+                         HorizontalOptions="End"/>
+                             <Label Text="{Binding SendTime}"
+                       HorizontalOptions="End"                    
+                       VerticalOptions="Start"/>  
+                          </StackLayout>             
+                  </Frame>
+                </StackLayout>           
+                </SwipeView>
+                           </local:PinchToZoomContainer.Content>
+                       </local:PinchToZoomContainer>
+                   </ViewCell>
+              </DataTemplate>
+          </ListView.ItemTemplate>
+      </ListView>
+                                  
+          <StackLayout x:Name="stack" BackgroundColor="Black" Orientation="Horizontal">
+      
+            <Entry x:Name="recordData"
+                   WidthRequest="280"
+                  HeightRequest="45"
+                   VerticalOptions="End"
+                   HorizontalOptions="CenterAndExpand"
+                BackgroundColor="Black"
+                   TextColor="White"    
+                    Margin="0,0,0,0"
+                   
+                  />
+            <Button Text="Send" x:Name="sendButton" 
+                 BorderWidth="2" WidthRequest="70" HeightRequest="50" VerticalOptions="End"
+                 HorizontalOptions="End" Margin="0,10,0,0"
+                 Scale="0.9" CornerRadius="30"  BackgroundColor="#03a5fc" Clicked="Button_Clicked"/>
+
+            
+              <Button Text="Edit"  IsVisible="false" x:Name="editButton"
+                 BorderWidth="2" WidthRequest="70" HeightRequest="50" VerticalOptions="End"
+                 HorizontalOptions="End" Margin="-5,10,-3,0"
+                 Scale="0.9" CornerRadius="30"  BackgroundColor="#03a5fc" Clicked="UpdateButton"/>
+                
+        </StackLayout>
+      </StackLayout>    
+       </Grid>
+</ContentPage>

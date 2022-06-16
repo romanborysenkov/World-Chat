@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Android", "Chat.Android\Chat.Android.csproj", "{EF00B544-3BF4-4D6C-8D18-F9149A8DA5AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat", "Chat\Chat.csproj", "{56B6D773-70B2-46BA-A868-7651E4255E0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF00B544-3BF4-4D6C-8D18-F9149A8DA5AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF00B544-3BF4-4D6C-8D18-F9149A8DA5AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF00B544-3BF4-4D6C-8D18-F9149A8DA5AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF00B544-3BF4-4D6C-8D18-F9149A8DA5AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56B6D773-70B2-46BA-A868-7651E4255E0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B6D773-70B2-46BA-A868-7651E4255E0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B6D773-70B2-46BA-A868-7651E4255E0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B6D773-70B2-46BA-A868-7651E4255E0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14E74198-D8F6-41D1-B095-FC2B96D16CDC}
+	EndGlobalSection
+EndGlobal
