@@ -1,11 +1,8 @@
 ﻿<Properties StartupConfiguration="{EF00B544-3BF4-4D6C-8D18-F9149A8DA5AE}|Default">
-  <MultiItemStartupConfigurations />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_3a_xl_q_10_0_-_api_29" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Chat/Views/AboutPage.xaml.cs">
     <Files>
       <File FileName="Chat/Views/AboutPage.xaml" Line="112" Column="31" />
-      <File FileName="Chat/Views/AboutPage.xaml.cs" Line="17" Column="26" />
+      <File FileName="Chat/Views/AboutPage.xaml.cs" Line="323" Column="38" />
       <File FileName="Chat/Models/MessageRepository.cs" Line="51" Column="47" />
       <File FileName="Chat/Views/VideoPage.xaml.cs" Line="1" Column="1" />
       <File FileName="Chat/Views/VideoPage.xaml" Line="10" Column="1" />
@@ -14,7 +11,13 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Chat" expanded="True" />
+          <Node name="Chat" expanded="True">
+            <Node name="Chat" expanded="True">
+              <Node name="Views" expanded="True">
+                <Node name="AboutPage.xaml" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
@@ -22,9 +25,12 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_3a_xl_q_10_0_-_api_29" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Chat.Android AndroidDesignerPreferredTheme="MainTheme" PreferredExecutionTarget="Android.pixel_3a_xl_q_10_0_-_api_29" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Chat.Android PreferredExecutionTarget="Android.pixel_3a_xl_q_10_0_-_api_29" AndroidDesignerPreferredTheme="MainTheme" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
