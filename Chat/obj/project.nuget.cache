@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gxw2Z0+/XPDPiLgN1cxVwDVwJJHjPu0QB14l5ebALczyAxliGEnWYE5vwa0J2ZhSDY1GeAPaOuO9z6wk3ri5OA==",
+  "dgSpecHash": "0KLM9tBJgPbccByO64kQ/41hvq01wJO4vgDCEjSCp7T7/QLG9d3tKtxwJ+CSUVP/aQ0emDkaKO5KpzdwHjneEQ==",
   "success": true,
-  "projectFilePath": "/Users/romsyaborysenko/Documents/Chat/Chat/Chat.csproj",
+  "projectFilePath": "/Users/romsyaborysenko/Documents/programming/NET/xamarin/Chat/Chat/Chat.csproj",
   "expectedPackageFiles": [
     "/Users/romsyaborysenko/.nuget/packages/firebaseauthentication.net/3.4.0/firebaseauthentication.net.3.4.0.nupkg.sha512",
     "/Users/romsyaborysenko/.nuget/packages/firebasedatabase.net/4.0.6/firebasedatabase.net.4.0.6.nupkg.sha512",

@@ -22,9 +22,6 @@ namespace Chat.Models
         FirebaseClient firebaseClient = new FirebaseClient("https://international-chat-60ea5-default-rtdb.europe-west1.firebasedatabase.app/");
 
         FirebaseStorage firebaseStorage = new FirebaseStorage("international-chat-60ea5.appspot.com");
-
-      
-
         public async Task<List<MyDatabaseRecord>> GetAll()
         {
             return (await firebaseClient.Child("Records").OnceAsync<MyDatabaseRecord>()).Select(item => new MyDatabaseRecord

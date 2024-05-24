@@ -13,11 +13,8 @@ namespace Chat
             InitializeComponent();
             Routing.RegisterRoute("main/login", typeof(LoginPage));
             Routing.RegisterRoute("main/signup", typeof(NewUserPage));
-
             BindingContext = this;
-
         }
-
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("//LoginPage");

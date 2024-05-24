@@ -35,7 +35,6 @@ namespace Chat.Views
         MessageRepository messageRepository = new MessageRepository();
 
        // MyDatabaseRecord myDatanaseRecord = new MyDatabaseRecord();
-
         public AboutPage()
         {
             InitializeComponent();

@@ -15,6 +15,5 @@ namespace Chat.Models.TypeModels
         public string Video { get; set; }
         public bool isFile { get; set; }
         public bool isVideo { get; set; }
- 
     }
 }
